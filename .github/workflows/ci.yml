@@ -11,12 +11,17 @@ on:
 
 jobs:
   terraform:
-    name: Terraform workflow
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # 🔐 Authenticate to GCP
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
