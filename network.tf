@@ -11,3 +11,12 @@ resource "google_compute_subnetwork" "subnet" {
   network       = google_compute_network.vpc.id
   project       = var.project_id
 }
+
+
+resource "google_compute_subnetwork" "subnet-1" {
+  name          = "sub-123"
+  ip_cidr_range = "10.20.0.0/24"
+  region        = var.region
+  network       = google_compute_network.vpc.id
+  project       = var.project_id
+}
