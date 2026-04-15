@@ -1,0 +1,6 @@
+project_id      = "test-tv5-hyd-online-news"
+vpc_name        = "restaurant-vpc"
+vpc_cidr        = "10.0.0.0/16"
+subnet_name     = "restaurant-subnet"
+subnet_cidr     = "10.0.1.0/24"
+region          = "us-central1"
